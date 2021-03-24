@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>中央法务区</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<link rel="stylesheet" href="assets/css/main.css">
+	<style>
+		@-ms-viewport { width:device-width; }
+		@media only screen and (min-device-width:800px) { html { overflow:hidden; } }
+		html { height:100%; }
+		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+		.home{
+			top:0;
+			left: 0;
+		}
+		#backhome{
+		  position: absolute;
+		  top: calc(100% - 80px);
+		  left: 50%;
+		  z-index: 99;
+		  display: none;
+		  width: 98px;
+		  height: 34px;
+		  color: #fff;
+		  background-color: transparent;
+		  background-image: url('./assets/texs/backhome1.png');
+		  background-repeat: no-repeat;
+		  background-position: center;
+		  background-size: cover;
+		  border: none;
+		  outline: none;
+		  transform: translateX(-50%);
+		}
+		.home2{
+			top:90%;
+			left: 50%;		
+			z-index: 1001;	
+		}
+		.home3{
+			top:90%;
+			left: 45%;		
+			z-index: 1001;	
+			width:98px;
+			height:34px;
+			background-color: #0a2a39;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			background-repeat: no-repeat;
+		}
+		.btns1{
+			z-index: 1001;
+			width:98px;
+			height:34px;
+			background-color: #0a2a39;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			background-repeat: no-repeat;
+		}
+		.btns2{
+			z-index: 1001;
+			width:98px;
+			height:34px;
+			background-color: #0a2a39;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			background-repeat: no-repeat;
+		}
+		.btns3{
+			z-index: 1001;
+			width:98px;
+			height:34px;
+			background-color: #0a2a39;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			background-repeat: no-repeat;
+		}
+		.btns4{
+			z-index: 1001;
+			width:98px;
+			height:34px;
+			background-color: #0a2a39;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			background-repeat: no-repeat;
+		}
+		.btns5{
+			z-index: 1001;
+			width:98px;
+			height:34px;
+			background-color: #0a2a39;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			background-repeat: no-repeat;
+		}
+
+		#backhome2{
+			z-index: 1001;
+			width:98px;
+			height:34px;
+			background-color: #ca403c;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			text-align: center;
+			background-repeat: no-repeat;
+		}
+		body .threesixty-wrapper{
+			margin: 0px auto;
+			    width: auto;
+			    position: relative;
+				cursor:pointer;
+		}
+		body .threesixty-wrapper .threesixty{
+			height: 100vh;
+			width:100vw;
+		}
+		.threesixty-frame{
+			height: 90vh;
+		}
+		#mpic2{
+			/* margin-top:-2vh; */
+		}
+		#FpsmMainBox{
+			display: none;
+			z-index: 999;
+			position: absolute;
+			height:100%;
+			background-color: rgba(0,0,0,0.8);
+			width: 100%;
+			z-index: 990;
+		}
+		#ButtonList{
+			z-index: 995;
+			position: absolute;
+			left:calc(50% - 300px);
+			width: auto;
+			height: auto;
+			bottom:50px;
+		}
+		.btnstyle{
+			margin:2px 0px 0px;
+			border: 1px solid transparent;
+			text-align: center;
+			z-index: 1001;
+			width:98px;
+			height:34px;
+			background-color: #0a2a39;
+			border:none;
+			color:white;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			outline: none;
+			background-repeat: no-repeat;
+		}
+		.active{
+			background-color: #3C76CA;
+		}
+		#clickHat{
+			height: 90vh;
+			position: absolute;
+		}
+		.hatitems{
+			position: absolute;
+			width: auto;
+			height: auto;
+			left: auto;
+			top: auto;
+			cursor: pointer;
+		}
+		#iframeBox{
+			width: 100%;
+			height:100%;
+			display:none;
+			position: absolute;
+			z-index: 1000;
+			background-color: rgba(0,0,0,0.4);
+			left:0px;
+			top:0px;
+		}
+		#iframeIn{
+			width: 80vw;
+			height: 80vh;
+			margin: 0 auto;
+			background-color: #0A2A39;
+			margin-top: 10vh;
+		}
+		#mainIframe{
+			width: 100%;
+			height:100%;
+		}
+		.pano_close_button{
+			position: absolute;
+			right:5vw;
+			cursor: pointer;
+		}
+		.pano_titles{
+			margin: 0 auto;
+			font-size: 18px;
+			font-weight: bold;
+			color: #f8f8f8;
+			padding: 8px;
+		}
+		.hotpoint_pano{
+			width: 10px;
+			height: 10px;
+			background-color: #ffffff;
+			animation-timing-function:ease-in-out;
+			animation-name:breathe;
+			animation-duration:700ms;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+			box-shadow: 0px 0px 8px 2px #d9f1f7;
+			border-radius: 100%;
+			margin: 10px auto;
+		}
+		@keyframes breathe {
+		  0% {
+		    opacity:0;
+		  }
+		  100% {
+		    opacity:1;
+		  }
+		}
+		#itemPic{
+			height: 90vh;
+			    width: auto;
+			    margin: 0 auto;
+		}
+		.item-pic{
+			position: absolute;
+			right: 0px;
+			top:0px;
+			pointer-events: none;
+			display:none;
+		}
+		.item-pic-active{
+			display: inline;
+		}
+/* 		#containerPic{
+			width: 100%;
+			height:100%;
+			cursor: pointer;
+		} */
+		#Rotation{
+			height: 90vh;
+			width: auto;
+			border: none;
+			margin: 0px;
+			padding: 0px;
+		}
+		#containerPic{
+			width: 100%;
+			height:100%;
+			display: none;
+			cursor: pointer;
+		}
+		.item-pic{
+			position: absolute;
+			left: 0px;
+			top:0px;
+			pointer-events: none;
+			display:none;
+		}
+		.item-pic-active{
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+
+<script src="pano.js"></script>
+<div id="FpsmMainBox">
+	<div id="containerPic" style="z-index:999">
+		<img id="itemPic" class='item-pic item-pic-active' src="./InitIMG/XH_0.png" width="100%" height="100%"/>
+	</div>
+	<img id="mpic2" src="./InitIMG/XH_1.png" style="height:90vh;width:auto;" />
+	<div id="clickHat"></div>
+	<div id="iframeBox">
+		<div id="iframeIn">
+			<div class="pano_close_button"><img src="./assets/img/close.png"/></div>
+			<iframe id="mainIframe" name="mainIframe" src="./panos.html?type=06" frameborder="0" scrolling="auto" ></iframe>
+		</div>
+		<div class="pano_titles"></div>
+	</div>
+</div>
+<div id="pano" style="width:100%;height:100%;">
+<button class="home" id="backhome" onclick="_krpano.call('skin_gotoscene(scene_01);');"></button>
+<div id="ButtonList" style="display: none;">
+	<button class="home3 btnstyle" data-id=0  onclick="JSMoudle.RoundFps()" style="cursor: pointer;">裙楼旋转</button>
+	<button class="btnstyle" data-id=1 id="F1" onclick="JSMoudle.playFPS_P1()" style="cursor: pointer;">F1</button>
+	<button class="btnstyle" data-id=2 id="F2" onclick="JSMoudle.playFPS_P2()" style="cursor: pointer;">F2</button>
+	<button class="btnstyle" data-id=3 id="F3" onclick="JSMoudle.playFPS_P3()" style="cursor: pointer;">F3</button>
+	<button class="btnstyle" data-id=4 id="F4" onclick="JSMoudle.playFPS_P4()" style="cursor: pointer;">F4</button>
+	<button class="btnstyle" data-id=5 id="F5" onclick="hideAllBtn();hideBoxFPS()" style="cursor: pointer;margin:2px 0px 0px;background-color: orangered;">退出</button>
+</div>
+<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+<script src="./plugins/jquery.js"></script>
+<script>
+	let _krpano;
+	{
+		
+		let StaTus=false;
+		embedpano({
+			swf:"pano.swf", 
+			xml:"config.xml", 
+			target:"pano", 
+			html5:"only", 
+			mobilescale:1.0, 
+			passQueryParameters:true,
+			onready:function(krpano){
+				_krpano=krpano;
+			}
+		});
+		
+		function displaybtn(){
+			setTimeout(function(){let btn2=document.getElementById("backhome").style.display="block";},500);		
+			hideAllBtn();hideBoxFPS();
+		}
+		function hidebtn(){
+			let btn2=document.getElementById("backhome").style.display="none";	
+			hideAllBtn();hideBoxFPS();			
+		}
+		let Objmpic2=document.getElementById("mpic2");
+		Objmpic2.onmousedown = function(e) {
+		    //获取x坐标和y坐标
+		    x = e.clientX;
+		    y = e.clientY;		
+			JSMoudle.P1.loop=false;
+		}	
+		
+	}
+	</script>
+	<script src="./plugins/main.js"></script>
+</div>
+</body>
+</html>
